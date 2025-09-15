@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#007bff" />
+    <title>NNH - Stay Updated</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="theme-toggle" id="themeToggle" role="button" aria-label="Toggle theme" title="Toggle theme">
+        <span id="themeIcon">🌙</span>
+    </div>
+
+    <header class="site-header">
+        <div class="container header">
+            <div class="brand">
+                <!-- Simple inline SVG logo -->
+                <svg width="44" height="44" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <rect width="24" height="24" rx="5" fill="#007bff"></rect>
+                    <path d="M6 8h12M6 12h12M6 16h8" stroke="#fff" stroke-width="1.6" stroke-linecap="round"></path>
+                </svg>
+                <div class="brand-text">
+                    <h1>News Nation Hub</h1>
+                    <p class="tagline">Stay tuned with the latest news from around the world</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="search-categories" aria-label="Search and categories">
+            <input id="searchInput" class="search-Box" type="search" placeholder="Search news (e.g. bitcoin, elections, space)..." aria-label="Search news" />
+
+            <div class="categories" role="tablist" aria-label="Categories">
+                <button class="category-btn active" data-category="general" role="tab">General</button>
+                <button class="category-btn" data-category="business" role="tab">Business</button>
+                <button class="category-btn" data-category="entertainment" role="tab">Entertainment</button>
+                <button class="category-btn" data-category="health" role="tab">Health</button>
+                <button class="category-btn" data-category="science" role="tab">Science</button>
+                <button class="category-btn" data-category="sports" role="tab">Sports</button>
+                <button class="category-btn" data-category="technology" role="tab">Technology</button>
+            </div>
+        </section>
+
+        <section id="newsGrid" class="news-grid" aria-live="polite"></section>
+
+        <div id="loading" class="loading" hidden>Loading news...</div>
+        <div id="error" class="error" hidden></div>
+        <div id="endMessage" class="end-message" hidden>🎈 You've reached the end!</div>
+
+        <footer class="footer">
+            <p>Tip: If live news don't load, the app will show sample articles so you can preview the UI.</p>
+            <p class="muted">Replace <code>API_KEY</code> in <code>index.js</code> with your NewsAPI key for live data.</p>
+        </footer>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
